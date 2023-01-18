@@ -21,8 +21,10 @@ INSTALLED_APPS = [
     "tailwind",
     "theme",
     "django_browser_reload",
+    "widget_tweaks",
     # custom app
     "pages.apps.PagesConfig",
+    "accounts.apps.AccountsConfig",
 ]
 
 # package settings
@@ -93,3 +95,8 @@ STATICFILES_DIRS = [BASE_DIR / "static"]
 # Default primary key field type
 # https://docs.djangoproject.com/en/4.1/ref/settings/#default-auto-field
 DEFAULT_AUTO_FIELD = "django.db.models.BigAutoField"
+
+AUTH_USER_MODEL = "accounts.CustomUser"
+
+LOGIN_REDIRECT_URL = "pages:index"
+LOGOUT_REDIRECT_URL = "login"
