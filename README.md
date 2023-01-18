@@ -23,3 +23,6 @@ make
 
 - [Django-Tailwind](https://django-tailwind.readthedocs.io/en/latest/installation.html)
   - 一瞬で tailwind autoreload が設定できる package
+
+- [Django-Browser-Reload](https://github.com/adamchainz/django-browser-reload)
+  - runserver の autoreload と browser の自動更新をしてくれる
