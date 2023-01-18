@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+{% load static %}
+{% load tailwind_tags %}
+
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>{% block title %} {% endblock %}</title>
+
+  <link rel="stylesheet" href="{% static 'base.css' %}">
+  {% tailwind_css %}
+  {% block extracss %} {% endblock %}
+</head>
+
+<body>
+<div id="wrapper">
+  {% include "header.html" %}
+
+  <main id="main">
+    {% include "sidebar.html" %}
+    {% block content %} {% endblock %}
+  </main>
+</div>
+
+{% block extrajs %} {% endblock %}
+</body>
+</html>
