@@ -6,6 +6,13 @@
 
 検索機能の充実
 
+## Start Project commands
+
+```
+make tailwind
+make
+```
+
 ## Features
 
 - CSS Framework
