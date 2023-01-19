@@ -8,6 +8,35 @@
 
 これもさくっと作る CSS を試すことが中心だということを忘れずに
 
+## Model
+
+- Dir
+  - NoteBook
+  - NoteBook
+
+みたいな感じがいいか?
+
+もしくはDirの構造をなくしてTag だけでどうにかするほうがよい?
+
+```python
+from django.db import models
+
+
+class Dir(models.Model):
+    title = models.CharField(max_length=150)
+
+
+class Tag(models.Model):
+    title = models.CharField(max_length=100)
+
+
+class NoteBook(models.Model):
+    parent_dir = models.ForeignKey(Dir, on_delete=models.CASCADE, blank=True)
+    title = models.CharField(max_length=150)
+    content = models.TextField()
+    tags = models.ManyToManyField(Tag)
+```
+
 ## Start Project commands
 
 ```
