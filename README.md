@@ -50,15 +50,6 @@ make
   - flexbox, grid-layout はなんとなくわかったのでもっと楽をする
   - いろいろあるが `tailwindcss` を利用してみる
 
-- Sidebar にメモ一覧を表示 タグをつけたメモ一覧を表示など?
-  - templatetags を利用する 常にサイドバーを表示しておく
-
-- Create <-> Edit の シームレスな移動
-  - いちいちCreate, Edit を実行するは面倒なのでCreateしたら即Editに移動する感じにする
-  - Create自体も Sidebar から ワンタッチでor `document.addEventListener(...)` でショートカットを設定など
-  - Createしたらそのままタイトル、メモ内容を即書けるようにしておく感じ
-  - というか Createを押したら URL的には `/memo/create/` -> Redirect -> `/memo/edit/1` に直で飛ぶ
-
 - Automatically Save
   - いちいち保存ボタンを押さずに 数秒ごとに自動保存する感じ
   - これもショートカットを設定する
@@ -74,6 +65,19 @@ make
   - memo の内容, memo のタイトル, memo についているタグで検索できるようにする
   - Ajax を使ってぬるっと(RealTime)検索できるようにする? (必要ないかも)
   - header に検索バーをつける感じ?
+
+## Done
+
+- [x] Create <-> Edit の シームレスな移動
+  - いちいちCreate, Edit を実行するは面倒なのでCreateしたら即Editに移動する感じにする
+  - Create自体も Sidebar から ワンタッチでor `document.addEventListener(...)` でショートカットを設定など
+  - Createしたらそのままタイトル、メモ内容を即書けるようにしておく感じ
+  - というか Createを押したら URL的には `/memo/create/` -> Redirect -> `/memo/edit/1` に直で飛ぶ
+  - めちゃくちゃ簡単だった ショートカットの設定は後日(そもそも必要かどうか考える)
+
+- [x] Sidebar にメモ一覧を表示 タグをつけたメモ一覧を表示など?
+  - templatetags を利用する 常にサイドバーを表示しておく
+  - これも簡単だった Django すげぇ
 
 ## Plugins
 
