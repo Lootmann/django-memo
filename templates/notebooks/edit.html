@@ -1,5 +1,7 @@
 {% extends 'base.html' %}
 
+{% load widget_tweaks %}
+
 {% block title %}
   Edit NoteBook
 {% endblock %}
@@ -14,10 +16,11 @@
 {% endblock %}
 
 {% block content %}
-  <main class="p-4">
-    <form action="{% url 'notebooks:edit' notebook.id %}" method="post">
+  <main class="p-4 w-full h-full">
+    <form action="{% url 'notebooks:edit' notebook.id %}" method="post" class="flex flex-col gap-y-2 h-full">
       {% csrf_token %}
-      {{ form.as_p }}
+      {% render_field form.title class="bg-slate-900 text-slate-200 text-xl" %}
+      {% render_field form.content class="bg-slate-900 text-slate-200 text-xl flex-grow" %}
     </form>
   </main>
 {% endblock %}
