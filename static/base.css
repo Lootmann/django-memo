@@ -1,3 +1,7 @@
+:root {
+  --main-bg-color: rgb(30 42 59);
+}
+
 *,
 *::after,
 *::before {
@@ -11,15 +15,17 @@ html,
 body,
 #wrapper {
   height: 100%;
+  background-color: var(--main-bg-color);
 }
 
 #main {
   display: flex;
 
   height: calc(100% - 72px);
-  background-color: #6b7280;
+  background-color: var(--main-bg-color);
 }
 
 #sidebar {
   width: 200px;
+  background-color: var(--main-bg-color);
 }
