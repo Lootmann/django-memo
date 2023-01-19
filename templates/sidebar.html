@@ -1,6 +1,6 @@
 {% load list_all_notebooks %}
 
-<div id="sidebar" class="pl-2 pt-2 bg-slate-900 text-zinc-300 text-2xl">
+<div id="sidebar" class="pl-2 pt-2 text-zinc-300 text-2xl">
   <form action="{% url 'notebooks:create' %}" method="post">
     {% csrf_token %}
     <div class="flex items-center gap-2">
