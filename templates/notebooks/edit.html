@@ -1,5 +1,6 @@
 {% extends 'base.html' %}
 
+{% load static %}
 {% load widget_tweaks %}
 
 {% block title %}
@@ -11,16 +12,15 @@
 {% endblock %}
 
 {% block extrajs %}
-  {# TODO: Impl automatically(Interval 20 sec?) saving a notebook using Ajax, not via form:input :^) #}
-  {# TODO: with Ctrl+S/Command+S, save a notebook #}
+  <script src="{% static 'js/notebook.js' %}" defer data-id="{{ notebook.id }}"></script>
 {% endblock %}
 
 {% block content %}
   <main class="p-4 w-full h-full">
     <form action="{% url 'notebooks:edit' notebook.id %}" method="post" class="flex flex-col gap-y-2 h-full">
       {% csrf_token %}
-      {% render_field form.title class="bg-slate-900 text-slate-200 text-xl" %}
-      {% render_field form.content class="bg-slate-900 text-slate-200 text-xl flex-grow" %}
+      {% render_field form.title class="bg-slate-900 text-slate-200 text-xl" id="title" %}
+      {% render_field form.content class="bg-slate-900 text-slate-200 text-xl flex-grow" id="content" %}
     </form>
   </main>
 {% endblock %}
