@@ -60,6 +60,9 @@ TEMPLATES = [
                 "django.contrib.auth.context_processors.auth",
                 "django.contrib.messages.context_processors.messages",
             ],
+            "libraries": {
+                "render_notebooks": "notebooks.templatetags.list_all_notebooks",
+            },
         },
     },
 ]
