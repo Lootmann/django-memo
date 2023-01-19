@@ -86,3 +86,10 @@ make
 
 - [Django-Browser-Reload](https://github.com/adamchainz/django-browser-reload)
   - runserver の autoreload と browser の自動更新をしてくれる
+
+## Bug Fix
+
+- 不自然な画面のちらつき
+  - Notebook から他のNotebookへ移動するときに完全に真っ白な画面が一フレームだけ表示される
+  - それが画面全体のちらつきになり すごくストレスがたまる
+  - CSSの読み込みが遅延している感じ? おそらくCSS の読み込み順を考えると治るはず
