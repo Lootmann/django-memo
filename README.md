@@ -50,10 +50,6 @@ make
   - flexbox, grid-layout はなんとなくわかったのでもっと楽をする
   - いろいろあるが `tailwindcss` を利用してみる
 
-- Automatically Save
-  - いちいち保存ボタンを押さずに 数秒ごとに自動保存する感じ
-  - これもショートカットを設定する
-
 - Markdown
   - メモは当然 markdown で書ける
   - Code Highlight も当然
@@ -65,6 +61,15 @@ make
   - memo の内容, memo のタイトル, memo についているタグで検索できるようにする
   - Ajax を使ってぬるっと(RealTime)検索できるようにする? (必要ないかも)
   - header に検索バーをつける感じ?
+
+## Now Implementing
+
+- [ ] Notebook さくっとセーブ機能詳細
+  - 保存に成功したら popup を表示 modal?
+  - error が発生したら これまた popup
+- [ ] JavaScript module 化
+  - できるんでしょうか? むりなら一つのファイルに全部の関数押し込める
+  - 見づらくなるがしょうがない
 
 ## Done
 
@@ -78,6 +83,11 @@ make
 - [x] Sidebar にメモ一覧を表示 タグをつけたメモ一覧を表示など?
   - templatetags を利用する 常にサイドバーを表示しておく
   - これも簡単だった Django すげぇ
+
+- [x] Automatically Save
+  - いちいち保存ボタンを押さずに 数秒ごとに自動保存する感じ
+  - これもショートカットを設定する
+  - 実は簡単だった が、JavaScript の理解もほんの少し進んだ気がする
 
 ## Plugins
 
