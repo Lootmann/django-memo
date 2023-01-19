@@ -25,6 +25,7 @@ INSTALLED_APPS = [
     # custom app
     "pages.apps.PagesConfig",
     "accounts.apps.AccountsConfig",
+    "notebooks.apps.NotebooksConfig",
 ]
 
 # package settings

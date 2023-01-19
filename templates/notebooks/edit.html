@@ -1,0 +1,23 @@
+{% extends 'base.html' %}
+
+{% block title %}
+  Edit NoteBook
+{% endblock %}
+
+{% block extracss %}
+
+{% endblock %}
+
+{% block extrajs %}
+  {# TODO: Impl automatically(Interval 20 sec?) saving a notebook using Ajax, not via form:input :^) #}
+  {# TODO: with Ctrl+S/Command+S, save a notebook #}
+{% endblock %}
+
+{% block content %}
+  <main class="p-4">
+    <form action="{% url 'notebooks:edit' notebook.id %}" method="post">
+      {% csrf_token %}
+      {{ form.as_p }}
+    </form>
+  </main>
+{% endblock %}
