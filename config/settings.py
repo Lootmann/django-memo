@@ -22,6 +22,7 @@ INSTALLED_APPS = [
     "theme",
     "django_browser_reload",
     "widget_tweaks",
+    "django_extensions",
     # custom app
     "pages.apps.PagesConfig",
     "accounts.apps.AccountsConfig",
