@@ -96,7 +96,7 @@ make
   - 見づらくなるがしょうがない
   - 無理でした
 
-- [x] 検索
+- [x] [検索](https://github.com/Lootmann/django-memo/commit/996c7abc48ed1719c6f25b1f16e8e46f174e6417)
   - header に検索バー == SearchForm をつける
   - 可能であれば）左のサイドバーに検索結果を表示する？
   - とりあえずTopページにそのまま検索結果を表示するように実装 これも簡単
