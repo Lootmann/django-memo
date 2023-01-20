@@ -62,6 +62,9 @@ make
   - Ajax を使ってぬるっと(RealTime)検索できるようにする? (必要ないかも)
   - header に検索バーをつける感じ?
 
+- JavaScriptのテスト
+  - ってどうやるの(これは後回しで)
+
 ## Now Implementing
 
 `<[:^)]`
