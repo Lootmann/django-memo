@@ -1,0 +1,49 @@
+#popup {
+  position: absolute;
+  top: calc(72px + 5px);
+  right: 5px;
+  width: 200px;
+  height: 80px;
+  z-index: 1;
+  padding: 10px;
+  visibility: hidden;
+}
+
+@keyframes fadeInOut {
+  0% {
+    visibility: hidden;
+    opacity: 0;
+  }
+  30% {
+    visibility: visible;
+    opacity: 0.8;
+  }
+  70% {
+    visibility: visible;
+    opacity: 0.8;
+  }
+  100% {
+    visibility: hidden;
+    opacity: 0;
+  }
+}
+
+.success {
+  background-color: yellowgreen;
+  font-size: 20px;
+  border: 3px solid green;
+  border-radius: 10px;
+
+  animation: fadeInOut 1s;
+  animation-duration: 1.3s;
+}
+
+.error {
+  background-color: indianred;
+  font-size: 20px;
+  border: 3px solid red;
+  border-radius: 10px;
+
+  animation: fadeInOut 1s;
+  animation-duration: 1.3s;
+}

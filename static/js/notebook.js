@@ -18,8 +18,24 @@ function getCSRFToken() {
 }
 
 
-// TODO: show popup at right-top when save is success or not
-function popup() {
+// show popup at right-top whether saving is success or not
+function popup(status) {
+  let message;
+  const p = document.getElementById("popup");
+
+  if (status === "success") {
+    message = "Success to Save :^)"
+  } else if (status === "error") {
+    message = "Fail to Save D:"
+  } else {
+    return;
+  }
+
+  p.textContent = message;
+  p.classList.add(status);
+  setTimeout(() => {
+    p.classList.remove(status);
+  }, 1000);
 }
 
 function getFormContent() {
@@ -32,7 +48,7 @@ function getFormContent() {
 const data = document.currentScript.dataset;
 const notebookId = data.id
 
-function saveNotebook() {
+function saveNotebook(show_message = true) {
   // get csrftoken
   const csrf_token = getCSRFToken();
 
@@ -52,26 +68,37 @@ function saveNotebook() {
       "X-CSRFToken": csrf_token,
     },
   }).then(response => {
-    if (!response.ok) {
-      // TODO: show error popup - can't connect server
-      console.log("hoge");
+    if (show_message) {
+      if (response.ok) {
+        popup("success");
+      } else {
+        popup("error");
+      }
     }
   }).catch(error => {
-    // console.log(error);
     // TODO: show error popup - something wrong with
+    if (show_message) {
+      popup("error");
+    }
   });
 }
 
 // don't show popup when run automatic save because it's annoying.
-const interval = 20 * 1000;
-setInterval(saveNotebook, interval);
+let autosaveTimer = setInterval(() => {
+  saveNotebook(false)
+}, 20 * 1000);
 
 // shortcut: Ctrl-s: save a notebook
 document.addEventListener("keydown", (event) => {
   if (event.ctrlKey && event.key === 's') {
     event.preventDefault();
     saveNotebook();
-    popup();
+
+    // refresh timer
+    clearInterval(autosaveTimer);
+    autosaveTimer = setInterval(() => {
+      saveNotebook(false)
+    }, 30 * 1000);
   }
 });
 

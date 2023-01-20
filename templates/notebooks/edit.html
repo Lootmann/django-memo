@@ -8,7 +8,7 @@
 {% endblock %}
 
 {% block extracss %}
-
+  <link rel="stylesheet" href="{% static 'css/popup.css' %}">
 {% endblock %}
 
 {% block extrajs %}
@@ -17,6 +17,7 @@
 
 {% block content %}
   <main class="p-4 w-full h-full">
+    <div id="popup" class="">Success to Save :^)</div>
     <form action="{% url 'notebooks:edit' notebook.id %}" method="post" class="flex flex-col gap-y-2 h-full">
       {% csrf_token %}
       {% render_field form.title class="bg-slate-900 text-slate-200 text-xl" id="title" %}
