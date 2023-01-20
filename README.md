@@ -64,12 +64,7 @@ make
 
 ## Now Implementing
 
-- [ ] Notebook さくっとセーブ機能詳細
-  - 保存に成功したら popup を表示 modal?
-  - error が発生したら これまた popup
-- [ ] JavaScript module 化
-  - できるんでしょうか? むりなら一つのファイルに全部の関数押し込める
-  - 見づらくなるがしょうがない
+`<[:^)]`
 
 ## Done
 
@@ -80,14 +75,24 @@ make
   - というか Createを押したら URL的には `/memo/create/` -> Redirect -> `/memo/edit/1` に直で飛ぶ
   - めちゃくちゃ簡単だった ショートカットの設定は後日(そもそも必要かどうか考える)
 
-- [x] Sidebar にメモ一覧を表示 タグをつけたメモ一覧を表示など?
+- [x] [Sidebar にメモ一覧を表示 タグをつけたメモ一覧を表示など?](https://github.com/Lootmann/django-memo/commit/0f41814302e98b94ca40f8549aa3af1eec8742ae)
   - templatetags を利用する 常にサイドバーを表示しておく
   - これも簡単だった Django すげぇ
 
-- [x] Automatically Save
+- [x] [Automatically Save](https://github.com/Lootmann/django-memo/commit/9c8c465a515540bdc8da21507d731d286da6e5ad)
   - いちいち保存ボタンを押さずに 数秒ごとに自動保存する感じ
   - これもショートカットを設定する
-  - 実は簡単だった が、JavaScript の理解もほんの少し進んだ気がする
+  - 実は簡単だった JavaScript の理解がほんの少し進んだ気がする
+
+- [x] [Notebook さくっとセーブ機能詳細](https://github.com/Lootmann/django-memo/commit/9c8c465a515540bdc8da21507d731d286da6e5ad)
+  - 保存に成功したら popup を表示 modal?
+  - error が発生したら これまた popup
+  - できたけど ...
+
+- [x] JavaScript module 化
+  - できるんでしょうか? むりなら一つのファイルに全部の関数押し込める
+  - 見づらくなるがしょうがない
+  - 無理でした
 
 ## Plugins
 
