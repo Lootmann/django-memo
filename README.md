@@ -101,6 +101,10 @@ make
   - 可能であれば）左のサイドバーに検索結果を表示する？
   - とりあえずTopページにそのまま検索結果を表示するように実装 これも簡単
 
+
+- [x] [shortcut Ctrl+](https://github.com/Lootmann/django-memo/commit/a5985a25f7a86f6957722bc0afa1346f875167b1)
+  - Ctrl+f を押すと search_form に Focusする機能
+
 ## Plugins
 
 - [Django-Tailwind](https://django-tailwind.readthedocs.io/en/latest/installation.html)
