@@ -21,11 +21,11 @@ body,
 #main {
   display: flex;
 
-  height: calc(100% - 72px);
+  height: calc(100% - 66px);
   background-color: var(--main-bg-color);
 }
 
 #sidebar {
-  width: 200px;
+  width: 240px;
   background-color: var(--main-bg-color);
 }
